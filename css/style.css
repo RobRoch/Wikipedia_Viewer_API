@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-image: url("../images/red-yellow-background.jpg"); }
+  body .search__input {
+    position: relative;
+    padding: 200px 200px 20px 200px; }
+  body .search__result {
+    margin-top: -100px; }
+    body .search__result .search__result__card {
+      padding: 0px 50px;
+      margin-bottom: 10px; }
+      body .search__result .search__result__card .result__card {
+        border: 2px solid #e81227;
+        background-image: url("../images/red-yellow-background.jpg"); }
+        body .search__result .search__result__card .result__card:hover {
+          box-shadow: 0 0 10px #e81227; }
+        body .search__result .search__result__card .result__card .card__text {
+          text-decoration: none;
+          color: #fff; }
