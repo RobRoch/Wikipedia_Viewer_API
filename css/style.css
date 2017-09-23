@@ -1,17 +1,20 @@
 .wrapper {
-  width: 100vw;
+  background: url("../images/red-yellow-background.jpg") center center fixed;
   height: 100vh;
-  margin: 0 auto;
-  background: url("../images/red-yellow-background.jpg") center center fixed; }
+  margin: 0 auto; }
   .wrapper .search__input {
     position: absolute;
     top: 20vh;
     left: 10vw;
-    width: 80vw; }
+    width: 80vw;
+    height: 6vh; }
+  .wrapper .input-group {
+    font-size: 5vh !important; }
   .wrapper .search__result {
     position: absolute;
-    width: 100vw;
-    top: 20vh; }
+    left: 20vw;
+    width: 60vw;
+    top: 30vh; }
     .wrapper .search__result .search__result__card {
       margin-bottom: 2vh; }
       .wrapper .search__result .search__result__card .result__card {

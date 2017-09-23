@@ -38,16 +38,16 @@ $(document).ready(function () {
           var snippetResult = list[i].snippet;
           //Adding articles
           $("#result").append(
-            `<article class='search__result__card col-12'>
+            `<article class='search__result__card'>
               <div class='card result__card'>
                 <a class='card__text' href=` +
             wiki +
             hrefResult +
             `>
                 <div class='card-block'>
-                  <h4 class='card-title text-center'>` +
+                  <p class='card-title text-center'>` +
             titleResult +
-            `</h4>
+            `</p>
                  <p class='card-text'>` +
             snippetResult +
             `</p>
@@ -63,8 +63,8 @@ $(document).ready(function () {
 
     //If not slided animate;
     if (!slided) {
-      $(".input-group").animate({ top: "-=10vh" });
-      $(".wrapper").css("height", "180vh");
+      $(".search__input").animate({ top: "-=10vh" });
+      $(".wrapper").css("height","180vh");
       slided = true;
     }
   });
@@ -77,8 +77,8 @@ $(document).ready(function () {
       //IF slided then animate
       if (slided) {
         //After result fadeOut
-        $(".input-group").delay(800).animate({ top: "+=10vh" });
-        $(".wrapper").css("height", "100vh");
+        $(".search__input").delay(800).animate({ top: "+=10vh" });
+        $(".wrapper").css("height","100vh");
         slided = false;
       }
     }

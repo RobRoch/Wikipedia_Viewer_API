@@ -1,22 +1,26 @@
 .wrapper {
-  width: 100vw;
+  background: url("../images/red-yellow-background.jpg") center center fixed;
   height: 100vh;
   margin: 0 auto;
-  background: url("../images/red-yellow-background.jpg") center center fixed;
   .search__input {
     position: absolute;
     top: 20vh;
     left: 10vw;
     width: 80vw;
+    height: 6vh;
+  }
+  .input-group {
+    font-size: 5vh!important;
   }
   .search__result {
     position: absolute;
-    width: 100vw;
-    top: 20vh;
+    left: 20vw;
+    width: 60vw;
+    top: 30vh;
     .search__result__card {
       margin-bottom: 2vh;
       .result__card {
-        text-align: center;
+        text-align: center; 
         border: 3px solid rgb(232, 18, 39);
         background-image: url("../images/red-yellow-background.jpg");
         &:hover {

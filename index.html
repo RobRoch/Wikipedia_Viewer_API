@@ -12,27 +12,20 @@
 </head>
 
 <body>
-  <div class="wrapper container-fluid">
-    <header class="row">
-      <div class="col-12 text-center">
-        <div class="search__input input-group">
-          <span class="input-group-btn">
-        <button id="searchButton" class="btn btn-danger" type="button">Search</button>
-      </span>
-          <input id="searchInput" type="text" class="form-control" placeholder="Search wikipedia...">
-          <button id="clearBtn" class="btn btn-danger" type="button">X</button>
-        </div>
-      </div>
-    </header>
-
-    <section id="result" class="row search__result">
+  <div class="wrapper ">
+    <div class="input-group search__input">
+      <button id="searchButton" class="btn btn-danger" type="button">Search</button>
+      <input id="searchInput" type="text" class="form-control" placeholder="Search wikipedia...">
+      <button id="clearBtn" class="btn btn-danger" type="button">X</button>
+    </div>
+    <section id="result" class="search__result">
       <!-- Search articles go here -->
     </section>
   </div>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-
   <script src="js/index.js"></script>
 
 </body>
