@@ -1,20 +1,26 @@
-body {
-  margin: 0;
-  background-image: url("../images/red-yellow-background.jpg");
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("../images/red-yellow-background.jpg") center center fixed;
   .search__input {
-    position:relative;
-    padding: 200px 200px 20px 200px;
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    width: 80vw;
   }
   .search__result {
-    margin-top:-100px;
+    position: absolute;
+    width: 100vw;
+    top: 20vh;
     .search__result__card {
-      padding: 0px 50px;
-      margin-bottom: 10px;
+      margin-bottom: 2vh;
       .result__card {
-        border: 2px solid rgb(232,18,39);
+        text-align: center;
+        border: 3px solid rgb(232, 18, 39);
         background-image: url("../images/red-yellow-background.jpg");
         &:hover {
-          box-shadow: 0 0 10px #e81227;
+          box-shadow: 0 0 15px #e81227;
         }
         .card__text {
           text-decoration: none;

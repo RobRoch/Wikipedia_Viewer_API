@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //For slide animation.
   var slided = false;
-  
+
   //Searchbutton function.
-  $("#searchButton").click(function() {
+  $("#searchButton").click(function () {
     //Empty data after search
     $("#result").empty();
 
@@ -23,13 +23,13 @@ $(document).ready(function() {
           format: "json"
         },
         dataType: "jsonp",
-        success: function(x) {
+        success: function (x) {
           list = x.query.search;
         }
       });
 
       //If ajax call is done, show result.
-      query.done(function() {
+      query.done(function () {
         for (var i = 0; i < 10; i++) {
           //Making articles
           var wiki = "https://en.wikipedia.org/wiki/";
@@ -41,16 +41,16 @@ $(document).ready(function() {
             `<article class='search__result__card col-12'>
               <div class='card result__card'>
                 <a class='card__text' href=` +
-                   wiki +
-                   hrefResult +
-                   `>
+            wiki +
+            hrefResult +
+            `>
                 <div class='card-block'>
                   <h4 class='card-title text-center'>` +
-                    titleResult +
-                     `</h4>
+            titleResult +
+            `</h4>
                  <p class='card-text'>` +
-                   snippetResult +
-                   `</p>
+            snippetResult +
+            `</p>
                  </a>
                </div>
              </div>
@@ -58,26 +58,27 @@ $(document).ready(function() {
           );
         }
       });
-      $("#result").delay( 400 ).fadeIn( 400 );
+      $("#result").delay(400).fadeIn(400);
     }
-    
+
     //If not slided animate;
     if (!slided) {
-      $(".input-group").animate({ bottom: "+=150px" });
-      
+      $(".input-group").animate({ top: "-=10vh" });
+      $(".wrapper").css("height", "180vh");
       slided = true;
     }
   });
-  
+
   //Clear button
-  $("#clearBtn").click(function() {
+  $("#clearBtn").click(function () {
     if ($("#searchInput").val() !== "") {
       $("#searchInput").val("");
-      $("#result").delay( 400 ).fadeOut( 400 );
+      $("#result").delay(400).fadeOut(400);
       //IF slided then animate
-      if(slided) {
+      if (slided) {
         //After result fadeOut
-        $(".input-group").delay(800).animate({ bottom: "-=150px" });
+        $(".input-group").delay(800).animate({ top: "+=10vh" });
+        $(".wrapper").css("height", "100vh");
         slided = false;
       }
     }
